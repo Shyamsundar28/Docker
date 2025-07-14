@@ -1,0 +1,6 @@
+FROM ubuntu:latest
+RUN  apt update && apt install nginx -y
+LABEL maintainer="shyam@test"
+LABEL shyam="app2"
+COPY index2.html /var/www/html/index.html
+CMD ["nginx", "-g", "daemon off"]
